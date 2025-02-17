@@ -89,7 +89,14 @@
     .login {
         height: 100vh;
     }
+    .login form{
+        transition: 1s;
+    }
+    .login form:hover{
 
+        box-shadow: 0 0 0 .2em #0dcaf0 ;
+        background-color: #333;
+    }
     </style>
 </head>
 <body>
