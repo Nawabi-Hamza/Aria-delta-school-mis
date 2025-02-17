@@ -40,7 +40,7 @@
         <h1 class="display-3 text-white fw-bold">Learn More, Achieve More</h1>
         <p class="text-white-50 fs-5">Start our platform and take your work easy.</p>
             <div class="d-flex justify-content-center gap-2">
-                <a href="./login.php" class="btn btn-light ">Get Started <i class="bi bi-arrow-right-circle"></i></a>
+                <a href="./login.php" class="btn btn-light btn-lg">Get Started <i class="bi bi-arrow-right-circle"></i></a>
             </div>
         </div>
     </section>
