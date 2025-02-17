@@ -68,14 +68,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./admin/extra/admin.css">
     <style>
-        .login{
-            height: 100vh;
+    body {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(https://images.unsplash.com/photo-1501349800519-48093d60bde0?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2Nob29sfGVufDB8fDB8fHww);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        z-index: -1;
+    }
+
+    .login {
+        height: 100vh;
+    }
+
+    @media only screen and (max-width: 800px) {
+        body::before {
+            display: none
         }
+        body{
+            background-color: aliceblue;
+        }
+    }
     </style>
 </head>
 <body>
@@ -107,11 +135,8 @@
     </form>
 
     
-
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
-
-</body>
-</html>
