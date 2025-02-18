@@ -139,8 +139,8 @@ table td{
         font-size: .5em;
     }
     .active{
-        border-radius:.5em 0em 0em .5em;
-        margin-left: 0px;
+        border-radius:0 !important;
+        margin-left: 0px !important;
     }
     .main-section{
         > aside{
