@@ -8,7 +8,7 @@
 </style>
 
 <ul class="navbar-nav side-bar">
-    <li class="side-item d-md-none"><a href="#" id="sidebarButton" data-target="pages/index.php"><span><i class="bi bi-person-circle h4"></i> </span><span>Home</span></a></li>
+    <li class="side-item d-md-none"><a href="#" id="sidebarButton" data-target="pages/index.php"><span><i class="bi bi-person-circle h4"></i> </span><span>Profile</span></a></li>
     <li class="side-item"><a href="#" id="sidebarButton" data-target="pages/index.php"><span><i class="bi bi-house h4"></i> </span><span>Home</span></a></li>
     <li class="side-item"><a href="#" id="sidebarButton" data-target="pages/manage_staff.php"><span><i class="bi bi-people-fill h4"></i> </span><span>Manage Staf</span></a></li>
     <li class="side-item"><a href="#" id="sidebarButton" data-target="pages/teachers.php"><span><i class="bi bi-person-workspace h4"></i> </span><span>My Teacher</span></a></li>

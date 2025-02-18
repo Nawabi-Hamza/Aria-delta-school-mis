@@ -28,7 +28,7 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $query = "INSERT INTO users (id, name, password, role) VALUES (?, ?, ?, ?)";
+    $query = "INSERT INTO users (uid, id, name, password, role) VALUES (?, ?, ?, ?)";
     try {
         // Set User - Add the user to the device with provided data
         $zk->setUser($uid, $id, $name, $password, $role);
@@ -37,7 +37,7 @@
         if (!$stmt) {
             die("SQL Error: " . $conn->error);
         }
-        $stmt->bind_param("isss", $id, $name, $password, $role);
+        $stmt->bind_param("iisss", $uid, $id, $name, $password, $role);
         if ($stmt->execute()) {
             echo "<p>User Added Successfully!</p>";
         } else {

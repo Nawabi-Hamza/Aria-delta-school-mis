@@ -62,10 +62,17 @@
     <div class="form-group">
         <select name="month" id="month">
         <script>
+            const date = new Date().toLocaleString("en-US", { month: "long"});
+            // const monthName = date.toLocaleString('en-US', { month: 'long' });
+            // console.log(date.toLowerCase())
             let html = ''
             let months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
             months.forEach(month => {
-                html += `<option value="${months.indexOf(month) + 1}">${month.charAt(0).toUpperCase() + month.slice(1)}</option>`
+                if(month === date.toLowerCase() ){
+                    html += `<option value="${months.indexOf(month) + 1}">${month.charAt(0).toUpperCase() + month.slice(1)}</option>`
+                }
+                // html += `<option value="${months.indexOf(month) + 1}">${month.charAt(0).toUpperCase() + month.slice(1)}</option>`
+
             });
             document.getElementById("month").insertAdjacentHTML("beforeend", html);
         </script>
@@ -90,4 +97,8 @@
 
     <button type="submit" name="btn-payment" class="btn btn-primary">Save</button>
 </form>
+
+<!-- <script>
+    
+</script> -->
 

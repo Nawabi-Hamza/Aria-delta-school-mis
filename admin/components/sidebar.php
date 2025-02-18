@@ -1,5 +1,14 @@
+<style>
+    .active{
+        background-color: #F8F9FA ;
+        color: black !important;
+        border-radius:1em 0em 0em 1em;
+        margin-left: 10px;
+    }
+</style>
 
 <ul class="navbar-nav side-bar">
+    <li class="side-item d-md-none"><a href="#" id="sidebarButton" data-target="pages/index.php"><span><i class="bi bi-person-circle h4"></i> </span><span>Profile</span></a></li>
     <li class="side-item"><a href="#" id="sidebarButton" data-target="pages/index.php"><span><i class="bi bi-speedometer h4"></i> </span><span class="side-text">Dashboard</span></a></li>
     <li class="side-item"><a href="#" id="sidebarButton" data-target="pages/students.php"><span><i class="bi bi-person-video3 h4"></i> </span><span class="side-text">Students</span></a></li>
     <li class="side-item"><a href="#" id="sidebarButton" data-target="pages/attendance.php"><span><i class="bi bi-calendar2-check h4"></i> </span><span class="side-text">َAttendance</span></a></li>

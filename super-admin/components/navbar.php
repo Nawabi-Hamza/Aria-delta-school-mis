@@ -47,7 +47,7 @@
             <script src="../assets/plugins/g-translate.js" defer></script>
          </li>
         <li>
-            <a href="#notification" class="notify m-0 bg-warning rounded-circle px-1 nav-link  position-relative" id="sidebarButton" data-target="pages/notification.php">
+            <a href="#notification" class="notify m-0 bg-light rounded-circle px-1 nav-link  position-relative" id="sidebarButton" data-target="pages/notification.php">
                 <div class="notification position-relative">
                     <i class="bi bi-bell-fill h3"></i>
                     <?php 
