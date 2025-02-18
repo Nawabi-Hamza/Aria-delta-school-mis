@@ -125,6 +125,10 @@ table td{
     h4{
         font-size: .5em;
     }
+    .active{
+        border-radius:0 !important;
+        margin-left: 0px !important;
+    }
     .main-section{
         > aside{
             width: 10%;
