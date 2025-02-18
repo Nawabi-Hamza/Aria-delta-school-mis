@@ -19,6 +19,7 @@
         $student_id = (int) $_POST['student_id'];
         $month = (int) $_POST['month'];  // Example: 3 for March
         $paid = (int) $_POST['paid']; 
+        $discount = (int) $_POST['discount']; 
     
         // Generate column names dynamically
         $month_name = strtolower(date("F", mktime(0, 0, 0, $month, 1))); // e.g., "march"
@@ -29,9 +30,9 @@
         $query = "UPDATE monthly_payments 
                     SET 
                     $column_paid = ?, 
+                    discount = discount + ?,
                     total_paid = COALESCE(january_total_paid, 0) + COALESCE(february_total_paid, 0) + COALESCE(march_total_paid, 0) + COALESCE(april_total_paid, 0),
-                    total_due = (2000 * ?) - total_paid 
-
+                    total_due = ((2000 * ?)-discount) - total_paid 
                     WHERE student_id = 3";
     
         $stmt = $conn->prepare($query);
@@ -41,7 +42,7 @@
         }
     
         // Bind only 2 parameters (not 4)
-        $stmt->bind_param("di", $paid, $month);
+        $stmt->bind_param("ddi", $paid, $discount, $month);
     
         if ($stmt->execute()) {
             echo "Payment updated successfully ✔️";
