@@ -67,68 +67,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>School MIS | Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./admin/extra/admin.css">
     <style>
-    /* body {
-        position: relative;
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        overflow: hidden;
-    } */
+        body{
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            /* background-image: url(https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2Nob29sfGVufDB8fDB8fHww); */
+            background-image: url(https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNjaG9vbHxlbnwwfHwwfHx8MA%3D%3D);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
 
-    body {
-        background-image: url(./assets/images/20231010_kristof-column_nyt_blog.jpg);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        z-index: -1;
-    }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); 
+        }
+        .login {
+            height: 100vh;
+            position: relative;
+            z-index: 2;
+        }
+        .login form{
+            transition: .5s;
+        }
+        .login form:hover{
 
-    .login {
-        height: 100vh;
-    }
-    .login form{
-        transition: 1s;
-    }
-    .login form:hover{
-
-        box-shadow: 0 0 0 .2em #0dcaf0 ;
-        background-color: #333;
-    }
+            box-shadow: 0 0 0 .1em #0dcaf0;
+            background-color: #333;
+        }
     </style>
 </head>
 <body>
-
-<div class="container mx-auto login align-items-center justify-content-center row">
-    <!-- <div class="text-center col-md-5 mb-0">
-        <img src="./assets/images/school-logo.png" class=" w-100 w-md-75 w-lg-50 w-xl-25" alt="">
-    </div> -->
-    <form method="POST" class="col-md-8 text-white col-xl-5  border rounded border-info p-4 ms-auto" action="login.php">
-        <h1 class="fw-bold h2">Login</h1>
-        
-        <div class="mb-4">
-            <label for="username">Username:</label>
-            <input type="text" id="username" class="form-control" placeholder="Username or Email" name="username" required>
-        </div>
-        <div class="mb-4">
-            <label for="password">Password:</label>
-            <input type="password" id="password" class="form-control" placeholder="Your Password" name="password" required>
-        </div>
-        <div class="mb-4">
-            <label for="role">Select Role:</label>
-            <select name="role" id="role" class="form-control form-select" required>
-                <option value="staff" default>Your Role</option>
-                <option value="superadmin">Superadmin</option>
-                <option value="staff">Staff</option>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-info">Login</button>
-    </form>
-
-    
-</div>
+    <div class="container mx-auto login align-items-center justify-content-center row">
+        <form method="POST" class="col-md-8 text-white col-xl-5  border rounded border-info p-4 ms-auto" action="login.php">
+            <h1 class="fw-bold h2">Login</h1>
+            
+            <div class="mb-4">
+                <label for="username">Username:</label>
+                <input type="text" id="username" class="form-control" placeholder="Username or Email" name="username" required>
+            </div>
+            <div class="mb-4">
+                <label for="password">Password:</label>
+                <input type="password" id="password" class="form-control" placeholder="Your Password" name="password" required>
+            </div>
+            <div class="mb-4">
+                <label for="role">Select Role:</label>
+                <select name="role" id="role" class="form-control form-select" required>
+                    <option value="staff" default>Your Role</option>
+                    <option value="superadmin">Superadmin</option>
+                    <option value="staff">Staff</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-info">Login</button>
+        </form>
+    </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
