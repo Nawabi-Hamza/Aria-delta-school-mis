@@ -27,16 +27,12 @@
     
         // Prepare SQL query
         $query = "UPDATE monthly_payments 
-                SET 
+                    SET 
                     $column_paid = ?, 
                     total_paid = COALESCE(january_total_paid, 0) + COALESCE(february_total_paid, 0) + COALESCE(march_total_paid, 0) + COALESCE(april_total_paid, 0),
-                    total_due = (2000 * ?) - total_paid,
-                    january_total_due = 0,
-                    february_total_due = 0,
-                    march_total_due = 0,
-                    april_total_due = 0,
-                    $column_due = total_due  
-                WHERE student_id = 3";
+                    total_due = (2000 * ?) - total_paid 
+
+                    WHERE student_id = 3";
     
         $stmt = $conn->prepare($query);
     
