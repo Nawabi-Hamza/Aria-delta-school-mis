@@ -16,16 +16,14 @@
     <li class="side-item"><a href="#" id="sidebarButton" data-target="pages/signout.php"><span><i class="bi bi-lock h4"></i> </span><span>Logout</span></a></li>
 </ul>
 
-
 <script>
-        document.addEventListener("DOMContentLoaded",function(){
-            const currentPage = window.location.hash.split("#")[1]
-            // console.log(currentPage)
-            document.querySelectorAll("#sidebarButton").forEach( el => {
-                if(el.getAttribute("data-target").split("/")[1] === currentPage){
-                    el.classList.add("active")
-                }
-            })
+    document.addEventListener("DOMContentLoaded",function(){
+        const currentPage = window.location.hash.split("#")[1]
+        // console.log(currentPage)
+        document.querySelectorAll("#sidebarButton").forEach( el => {
+            if(el.getAttribute("data-target").split("/")[1] === currentPage){
+                el.classList.add("active")
+            }
         })
-       
+    })
 </script>
