@@ -19,7 +19,6 @@
     <li class="side-item"><a href="#" id="sidebarButton" data-target="pages/referrals.php"><span><i class="bi bi-person-gear h4"></i> </span><span class="side-text">Referrals</span></a></li>
 </ul>
 
-
 <script>
         document.addEventListener("DOMContentLoaded",function(){
             const currentPage = window.location.hash.split("#")[1]

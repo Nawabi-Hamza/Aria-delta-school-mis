@@ -15,7 +15,6 @@
     --bs-table-hover-bg: var(--primary-color) !important;
     color: white !important;
 }
-
 /* Custom Outline Info Button */
 .btn-outline-info {
     --bs-btn-color: var(--primary-color) !important; /* Text color */
@@ -26,19 +25,17 @@
     --bs-btn-active-bg:var(--primary-color) !important; /* Background when clicked */
     --bs-btn-active-border-color: var(--primary-color) !important; /* Border when clicked */
 }
-
 .bg--primary{
     background-color: var(--primary-color);
 }
 .bg--secondary{
     background-color: var(--secondary-color);
 }
-
 .active{
     background-color: #F8F9FA;
     color: black !important;
-    border-radius:1em 0em 0em 1em;
-    margin-left: 10px;
+    border-radius: .5em !important;
+    margin: 10px;
 }
 h1{
     font-size: 2em;
@@ -72,9 +69,17 @@ table td{
 .main-section{
     height: 95vh;
     > aside{
-        width: 20%; 
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
         > .side-bar{
-            height: 90vh;
+            width: 90%;
+            background:rgb(2, 34, 49);
+            box-shadow: 0 0 12px #333;
+            height: 95%;
+            border-radius: 0 0 .6em .6em; 
             overflow-y: auto;
             > .side-item{
                 display: flex;
@@ -97,19 +102,20 @@ table td{
         overflow-y: auto;
     }
 }
-
-
 .side-item a:hover{
-    background-color: var(--primary-color);
+    background-color:rgba(0, 170, 255, 0.79);
     cursor: pointer;
     color: var(--secondary-color);
 }
-
-
 @media only screen and (max-width: 1200px){
     .main-section{
         > aside{
             width: 5%;
+            > .side-bar{
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
             .navbar-nav .side-item a{
                 padding: .8em;
                 text-align: center;
@@ -140,11 +146,16 @@ table td{
     }
     .active{
         border-radius:0 !important;
-        margin-left: 0px !important;
+        margin: 0px !important;
     }
     .main-section{
         > aside{
             width: 10%;
+            > .side-bar{
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
             > .navbar-nav .side-item a{
                 padding: .5em;
                 display: flex;

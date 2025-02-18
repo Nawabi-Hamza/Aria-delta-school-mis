@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../assets/bootstrap/bs.min.css">
     <script src="../assets/bootstrap/bs.min.js" ></script>
-    <link rel="stylesheet" href="./extra/admin.css">
+    <link rel="stylesheet" href="./assets/admin.css">
     <title>School | MIS</title>
 </head>
 <body>
@@ -26,36 +26,9 @@
         </main>
     </section>  
     <!-- Script for load content dynamicaly as component in single page -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Custom script for load page like a compoent -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="../assets/plugins/load-page-dynamic.js" defer></script>
     <script>
-        function loadPageDynamic(directory){
-            $.ajax({
-                url: directory, 
-                method: 'GET',
-                success: function(response) {
-                    $('.dynamic-content').html(response);
-                },
-                error: function() {
-                    console.log("This page does not exist");
-                    loadPageDynamic("pages/index.php")
-                }
-            });
-        }
-        $(document).on('click','#sidebarButton', function(e) {
-            e.preventDefault(); 
-            var targetPage = $(this).data('target');  
-            $('#defaultContent').hide();
-            window.location.assign('#'+targetPage.split("/")[1])
-            loadPageDynamic(targetPage)
-            document.querySelectorAll("#sidebarButton").forEach( el => el.classList.remove("active"))
-            this.classList.add("active")
-            console.log(this)
-        });
-        document.addEventListener("DOMContentLoaded",function(){
-            const currentPage = window.location.hash.split("#")[1]
-            loadPageDynamic(`pages/${currentPage}`)
-        })
         function toggleSideBar(){
             const st = document.querySelectorAll(".side-text")
             const as = document.querySelector("aside")
@@ -63,7 +36,6 @@
             as.style.width = as.style.width === "20%" ? "5%" : "20%"
             ma.style.width = ma.style.width === "80%" ? "95%" : "80%"
             st.forEach((el) => el.style.display = el.style.display === "block" ? "none" : "block")
-            // console.log(this)
         }
         document.getElementById("toggleSidebar").addEventListener("click", toggleSideBar)
     </script>
