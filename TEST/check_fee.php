@@ -18,7 +18,7 @@
     if (isset($_POST["btn-payment"])) {
         $student_id = (int) $_POST['student_id'];
         $month = (int) $_POST['month'];  // Example: 3 for March
-        $paid = (int) $_POST['paid']; 
+        $paid = (double) $_POST['paid']; 
         $discount = (int) $_POST['discount']; 
     
         // Generate column names dynamically
@@ -27,13 +27,22 @@
         $column_due = "{$month_name}_total_due";
     
         // Prepare SQL query
-        $query = "UPDATE monthly_payments 
-                    SET 
-                    $column_paid = ?, 
-                    discount = discount + ?,
-                    total_paid = COALESCE(january_total_paid, 0) + COALESCE(february_total_paid, 0) + COALESCE(march_total_paid, 0) + COALESCE(april_total_paid, 0),
-                    total_due = ((2000 * ?)-discount) - total_paid 
-                    WHERE student_id = 3";
+        $query = "
+            UPDATE monthly_payments 
+            SET 
+                $column_paid = ?, 
+                discount = discount + ?,
+                total_paid = COALESCE(january_total_paid, 0) + COALESCE(february_total_paid, 0) + COALESCE(march_total_paid, 0) + COALESCE(april_total_paid, 0), 
+                total_due = ((2000 * ((january_total_paid > 0) + (february_total_paid > 0) + (march_total_paid > 0) + (april_total_paid > 0))) - discount) - total_paid 
+            WHERE student_id = 3";
+
+        // $query = "UPDATE monthly_payments 
+        //             SET 
+        //             $column_paid = ?, 
+        //             discount = discount + ?,
+        //             total_paid = COALESCE(january_total_paid, 0) + COALESCE(february_total_paid, 0) + COALESCE(march_total_paid, 0) + COALESCE(april_total_paid, 0),
+        //             total_due = ((2000 * ?)-discount) - total_paid 
+        //             WHERE student_id = 3";
     
         $stmt = $conn->prepare($query);
     
@@ -41,8 +50,8 @@
             die("SQL Error: " . $conn->error);
         }
     
-        // Bind only 2 parameters (not 4)
-        $stmt->bind_param("ddi", $paid, $discount, $month);
+        
+        $stmt->bind_param("di", $paid, $discount);
     
         if ($stmt->execute()) {
             echo "Payment updated successfully ✔️";
@@ -68,10 +77,10 @@
             let html = ''
             let months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
             months.forEach(month => {
-                if(month === date.toLowerCase() ){
-                    html += `<option value="${months.indexOf(month) + 1}">${month.charAt(0).toUpperCase() + month.slice(1)}</option>`
-                }
-                // html += `<option value="${months.indexOf(month) + 1}">${month.charAt(0).toUpperCase() + month.slice(1)}</option>`
+                // if(month === date.toLowerCase() ){
+                //     html += `<option value="${months.indexOf(month) + 1}">${month.charAt(0).toUpperCase() + month.slice(1)}</option>`
+                // }
+                html += `<option value="${months.indexOf(month) + 1}">${month.charAt(0).toUpperCase() + month.slice(1)}</option>`
 
             });
             document.getElementById("month").insertAdjacentHTML("beforeend", html);
