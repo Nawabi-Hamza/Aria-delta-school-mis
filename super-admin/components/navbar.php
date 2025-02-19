@@ -1,51 +1,10 @@
 
 
-
-<style>
-    .gt_selector{
-        border: 1px solid #333;
-        background: none;
-        padding: .2em;
-        border-radius: 4px;
-    }
-    .notifictaion-popup{
-        position: absolute;
-        width: 300px;
-        max-height: 200px;
-        overflow-y: auto;
-        right: 10px;
-        display: none;
-        border-radius: .2em;
-        z-index: 5;
-    }
-    .notification-img{
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-    .notification-content{
-        
-        > h6{
-            font-size: 15px;
-            margin: 0;
-        }
-        > p{
-            font-size: 12px;
-            margin: 0;
-        }
-    }
-</style>
-
-
 <nav class="d-flex justify-content-between align-items-center bg--primary  px-4 pt-1">
     <h2 class="fw-bold">SuperAdmin Dashboard</h2>
     <ul class="d-flex justify-content-between mt-2 me-4 gap-4 align-items-center">
          <li>
-            <div class="gtranslate_wrapper"></div>
-            <script>window.gtranslateSettings = {"default_language":"en","native_language_names":true,"detect_browser_language":true,"languages":["en","fr","ar","fa","ps"],"wrapper_selector":".gtranslate_wrapper"}</script>
-            <!-- <script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script> -->
-            <script src="../assets/plugins/g-translate.js" defer></script>
+            <div class="gtranslate_wrapper border border-black rounded"></div>
          </li>
         <li>
             <a href="#notification" class="notify m-0 bg-light rounded-circle px-1 nav-link  position-relative" id="sidebarButton" data-target="pages/notification.php">
@@ -92,39 +51,3 @@
     </ul>
 </nav>
 
-
-<script>
-    // Function to update direction based on lang attribute
-    function updateDirection() {
-        const lang = document.documentElement.getAttribute("lang"); // Get the current lang attribute
-        
-        if (["ar", "fa", "ps"].includes(lang)) {
-            document.documentElement.setAttribute("dir", "rtl");
-        } else {
-            document.documentElement.setAttribute("dir", "ltr");
-        }
-    }
-    // Create a MutationObserver to watch for changes in the lang attribute
-    const observer = new MutationObserver(() => {
-        updateDirection(); // Call function when lang changes
-    });
-    // Start observing changes in the lang attribute of the <html> tag
-    observer.observe(document.documentElement, {
-        attributes: true,
-        attributeFilter: ["lang"] // Only watch for lang attribute changes
-    });
-    // Initial direction setup in case the page starts with a different language
-    updateDirection();
-
-    // notification popup
-    const notifyContainer = document.querySelector(".notify");
-    const notification = document.querySelector(".notification");
-    const notificationPopup = document.querySelector(".notifictaion-popup");
-    notification.addEventListener("mouseenter", function() {
-        // alert("You have a new notification");
-        notificationPopup.style.display = "block";
-    });
-    notifyContainer.addEventListener("mouseleave", function() {
-        notificationPopup.style.display = "none" ;
-    });
-</script>

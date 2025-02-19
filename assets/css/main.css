@@ -5,9 +5,58 @@
 }
 :root{
     --primary-color: #056da0;
-    --secondary-color:rgba(0, 0, 0, 0.83);
+    /* --secondary-color:rgba(0, 0, 0, 0.83); */
+    --secondary-color: rgb(2, 34, 49);
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
 }
 
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+    cursor: pointer;
+}
+/* G-Translate Button*/
+.gt_selector {
+    border: 1px solid var(--secondary-text-color);
+    background: none;
+    padding: .2em;
+    color: var(--primary-text-color);
+    cursor: pointer;
+}
+/* Notification */
+.notifictaion-popup{
+    position: absolute;
+    width: 300px;
+    max-height: 200px;
+    overflow-y: auto;
+    right: 10px;
+    display: none;
+    border-radius: .2em;
+    z-index: 3;
+}
+.notification-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.notification-content{
+    > h6{
+        font-size: 15px;
+        margin: 0;
+    }
+    > p{
+        font-size: 12px;
+        margin: 0;
+    }
+}
 /* Change "info" color for tables */
 .table-info {
     --bs-table-bg: var(--primary-color) !important;
@@ -77,7 +126,7 @@ table td{
         align-items: center;
         > .side-bar{
             width: 90%;
-            background:rgb(2, 34, 49);
+            background: var(--secondary-color);
             box-shadow: 0 0 12px #333;
             height: 95%;
             border-radius: 0 0 .6em .6em; 
@@ -108,6 +157,7 @@ table td{
     cursor: pointer;
     color: var(--secondary-color);
 }
+/* Responsive for size 1200px screen */
 @media only screen and (max-width: 1200px){
     .main-section{
         > aside{
@@ -131,7 +181,7 @@ table td{
         }
     }
 }
-
+/* Responsive for screen size 900px */
 @media only screen and (max-width: 900px){
     h1{
         font-size: 1.5em;

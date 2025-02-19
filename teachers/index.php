@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +9,6 @@
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="../assets/css/animate.css">
     <title>School | Teachers</title>
-    <style>
-        /* .dynamic-content{
-            opacity: 0;
-
-        } */
-
-    </style>
 </head>
 <body class="bg-light">
     <header>
@@ -34,8 +26,13 @@
         </main>
     </section>
     <!-- Script for load content dynamicaly as component in single page -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="../assets/plugins/jquery-3.6.0.min.js" defer></script>
     <script src="../assets/plugins/load-page-dynamic.js" defer></script>
-    <script src="../assets/plugins/toggleSidebar.js"></script>
+    <!-- Change Page Direction -->
+    <script src="../assets/plugins/changeDirectionPage.js" ></script>
+    <script src="../assets/plugins/toggleSidebar.js" ></script>
+    <!-- G-Translate -->
+    <script>window.gtranslateSettings = {"default_language":"en", "native_language_names":true, "detect_browser_language":true, "languages":["en","fr","ar","fa","ps"], "wrapper_selector":".gtranslate_wrapper"}</script>
+    <script src="../assets/plugins/g-translate.js" defer></script>
 </body>
 </html>

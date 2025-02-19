@@ -14,14 +14,3 @@
 </ul>
 
 
-<script>
-        document.addEventListener("DOMContentLoaded",function(){
-            const currentPage = window.location.hash.split("#")[1]
-            // console.log(currentPage)
-            document.querySelectorAll("#sidebarButton").forEach( el => {
-                if(el.getAttribute("data-target").split("/")[1] === currentPage){
-                    el.classList.add("active")
-                }
-            })
-        })
-</script>
