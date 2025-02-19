@@ -68,8 +68,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School MIS | Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./admin/extra/admin.css">
+    <link rel="stylesheet" href="./assets/bootstrap/bs.min.css">
+    <link rel="stylesheet" href="./assets/css/animate.css">
     <style>
         body{
             position: relative;
@@ -82,7 +82,6 @@
             background-size: cover;
             background-position: center;
         }
-
         body::before {
             content: "";
             position: absolute;
@@ -109,7 +108,7 @@
 </head>
 <body>
     <div class="container mx-auto login align-items-center justify-content-center row">
-        <form method="POST" class="col-md-8 text-white col-xl-4  border rounded border-info p-4 ms-auto" action="login.php">
+        <form method="POST" class="animate__animated animate__fadeInRight animate__delay-0.5s col-md-8 text-white col-xl-4  border rounded border-info p-4 ms-auto" action="./super-admin/index.php">
             <h1 class="fw-bold h2">Login</h1>
             
             <div class="mb-4">
@@ -131,7 +130,7 @@
             <button type="submit" class="btn btn-info">Login</button>
         </form>
     </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/bootstrap/bs.min.js"></script>
 </body>
 </html>
 

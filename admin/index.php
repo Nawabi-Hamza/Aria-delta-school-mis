@@ -11,7 +11,7 @@
     <title>School | MIS</title>
 </head>
 <body>
-<!-- animate__animated animate__fadeInUp animate__delay-0.5s -->
+
     <header>
         <?php include "./components/navbar.php" ?>
     </header>
