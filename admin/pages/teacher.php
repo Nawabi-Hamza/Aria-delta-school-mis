@@ -56,6 +56,7 @@ $result = false;
 // Start HTML output
 ?>
 
+<title>School | Admin Teachers</title>
     
 <div class="container mt-4 animate__animated animate__fadeInUp animate__delay-0.5s">
     <h2>Teacher Details Managed by You</h2>

@@ -6,6 +6,7 @@
 
 
 ?>
+<title>School | Admin Attendance</title>
 
 <div class="container-fluid mt-4 animate__animated animate__fadeInUp animate__delay-0.5s">
     <h1>

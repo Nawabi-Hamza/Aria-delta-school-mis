@@ -120,6 +120,7 @@ if(isset($_POST['btn-register'])){
         color: #343a40;
     }
 </style>
+<title>Super Admin | Manage Staff</title>
 
 <div class="mb-5 animate__animated animate__fadeInUp animate__delay-0.5s">
     <div class="container">

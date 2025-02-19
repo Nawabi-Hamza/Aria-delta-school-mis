@@ -5,6 +5,8 @@ include('../includes/db_connection.php');
 
 ?>
 
+<title>Super Admin | Students</title>
+
 
 <div class="bg-white animate__animated animate__fadeInUp animate__delay-0.5s mb-4 rounded rounded-3 shadow">
         <div class="container p-4">

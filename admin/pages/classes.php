@@ -106,6 +106,8 @@
         }
     }
 </style>
+<title>School | Admin Classes</title>
+
 <div class="container-fluid mt-4 animate__animated animate__fadeInUp animate__delay-0.5s" id="">
     <div class="">
         <div class="d-flex justify-content-between">

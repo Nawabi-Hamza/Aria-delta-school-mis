@@ -98,6 +98,7 @@ if(isset($_POST['input'])){
 
 </style>
 
+<title>School | Admin Students</title>
 
 <div class="container-fluid mt-4 animate__animated animate__fadeInUp animate__delay-0.5s">
     <h1 class="h3">Current Students</h1>

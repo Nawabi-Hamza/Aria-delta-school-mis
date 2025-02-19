@@ -174,6 +174,7 @@ $selectedMonth = isset($_POST['month']) ? $_POST['month'] : $today->format('Y-m'
 ?>
 
     
+<title>Super Admin | Reports</title>
 
 <div class="bg-white mb-4 rounded rounded-3 shadow animate__animated animate__fadeInUp animate__delay-0.5s">
     <div class="container p-4">

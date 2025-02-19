@@ -5,6 +5,8 @@
 //  include('../includes/sidebar.php');
 
 ?>
+<title>Super Admin | Manage Finance</title>
+
 
 <div class="container animate__animated animate__fadeInUp animate__delay-0.5s">
         <div class="bg-white p-4">

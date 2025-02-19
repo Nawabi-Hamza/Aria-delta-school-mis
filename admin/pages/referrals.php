@@ -58,6 +58,7 @@
 </script>
 
 
+<title>School | Admin Referral</title>
 
 <div class="container mt-4 border border-1 p-4 bg-white rounded animate__animated animate__fadeInUp animate__delay-0.5s">
     <h1 class="text-info">Referral Information</h1>

@@ -28,6 +28,7 @@ $adminId = $user_id;
              padding: 20px;
         }
     </style>
+<title>Super Admin | Manage Class</title>
 
 <div class="container animate__animated animate__fadeInUp animate__delay-0.5s">
     <div class="bg-white mb-4  rounded-3 ">

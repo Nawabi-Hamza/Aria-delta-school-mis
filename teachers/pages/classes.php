@@ -1,3 +1,9 @@
+
+
+
+<title>Teachers | Classes</title>
+
+
 <?php
 
 // Database connection
@@ -124,3 +130,4 @@ $conn->close();
         background-color: #f1f1f1;
     }
 </style>
+

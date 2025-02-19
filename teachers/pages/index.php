@@ -26,6 +26,9 @@
         cursor: pointer;
     }
 </style>
+
+<title>Teachers | Portal</title>
+
 <div class="container animate__animated animate__fadeInUp animate__delay-0.5s">
     <h2 class="text-center pb-5">Teacher Portal Dashboard</h2>
     <div class="card-container row justify-content-between">

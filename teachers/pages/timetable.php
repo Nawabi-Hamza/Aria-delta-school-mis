@@ -1,4 +1,6 @@
 
+<title>Teachers | TimeTable</title>
+
 <div class="container animate__animated animate__fadeInUp animate__delay-0.5s">
     <h2 class="text-center pb-5">My Times Table</h2>
     <div class="container-wrapper">

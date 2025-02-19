@@ -8,7 +8,7 @@
     <script src="../assets/bootstrap/bs.min.js" ></script>
      <link rel="stylesheet" href="../assets/css/main.css">
      <link rel="stylesheet" href="../assets/css/animate.css">
-    <title>School | MIS</title>
+    <title>School | Super Admin</title>
 </head>
 <body>
     <header>

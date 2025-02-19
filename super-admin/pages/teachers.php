@@ -133,6 +133,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_teacher'])) {
     }
 
 </style>
+<title>Super Admin | Manage Teachers</title>
 
 <div class="animate__animated animate__fadeInUp animate__delay-0.5s">
     <div class="container bg-white p-4 border rounded mb-5">

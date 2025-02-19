@@ -1,4 +1,5 @@
 
+<title>School | Super Admin</title>
 
 <div class="container animate__animated animate__fadeInUp animate__delay-0.5s">
     <div class="bg-white border border-1 p-5 mt-2">

@@ -6,6 +6,7 @@
 
 ?>
 
+<title>Super Admin | About</title>
     
 <div class="container animate__animated animate__fadeInUp animate__delay-0.5s">
     <div class="bg-white shadow p-4 rounded">

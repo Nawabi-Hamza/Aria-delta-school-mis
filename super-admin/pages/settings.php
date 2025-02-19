@@ -38,8 +38,6 @@ if (isset($_POST['update-privileges'])) {
 ?>
 
 
-
-    <title>Students</title>
     <style>
         /* html, body {
             background-color: #f5f5f5;
@@ -103,6 +101,9 @@ if (isset($_POST['update-privileges'])) {
             }
         }
     </style>
+
+<title>Super Admin | Settings</title>
+
 
 <div class="bg-white mb-4 rounded rounded-3 shadow animate__animated animate__fadeInUp animate__delay-0.5s">
         <div class="container p-4">
