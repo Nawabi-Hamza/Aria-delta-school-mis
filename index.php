@@ -109,12 +109,12 @@
 </head>
 <body>
     <div class="container mx-auto login align-items-center justify-content-center row">
-        <form method="POST" class="col-md-8 text-white col-xl-5  border rounded border-info p-4 ms-auto" action="login.php">
+        <form method="POST" class="col-md-8 text-white col-xl-4  border rounded border-info p-4 ms-auto" action="login.php">
             <h1 class="fw-bold h2">Login</h1>
             
             <div class="mb-4">
                 <label for="username">Username:</label>
-                <input type="text" id="username" class="form-control" placeholder="Username or Email" name="username" required>
+                <input type="text" id="username" class="form-control" placeholder="Username" name="username" required>
             </div>
             <div class="mb-4">
                 <label for="password">Password:</label>
