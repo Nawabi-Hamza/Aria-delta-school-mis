@@ -29,7 +29,7 @@
 ?>
 
 
-    <div class="container-fluid mt-4">
+    <div class="container-fluid mt-4 animate__animated animate__fadeInUp animate__delay-0.5s">
         <div class="">
             <div class="d-flex justify-content-between">
                 <h1 class="dashboard-title">My Subjects</h1>

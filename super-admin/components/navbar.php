@@ -16,6 +16,7 @@
         right: 10px;
         display: none;
         border-radius: .2em;
+        z-index: 5;
     }
     .notification-img{
         width: 40px;

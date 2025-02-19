@@ -8,14 +8,22 @@
     <link rel="stylesheet" href="../assets/bootstrap/bs.min.css">
     <script src="../assets/bootstrap/bs.min.js"></script>
     <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
     <title>School | Teachers</title>
+    <style>
+        /* .dynamic-content{
+            opacity: 0;
+
+        } */
+
+    </style>
 </head>
 <body class="bg-light">
     <header>
         <?php include "./components/navbar.php" ?>
     </header>
     <section class="main-section d-flex">
-        <aside>
+        <aside class="animate__animated animate__bounceInLeft animate__delay-.2s">
             <?php include "./components/sidebar.php" ?>
         </aside>
         <main class="content-wrapper bg-light">

@@ -7,18 +7,20 @@
     <link rel="stylesheet" href="../assets/bootstrap/bs.min.css">
     <script src="../assets/bootstrap/bs.min.js" ></script>
     <link rel="stylesheet" href="./assets/admin.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
     <title>School | MIS</title>
 </head>
 <body>
+<!-- animate__animated animate__fadeInUp animate__delay-0.5s -->
     <header>
         <?php include "./components/navbar.php" ?>
     </header>
-    <section class="main-section d-flex">
-        <aside class="bg--secondary">
+    <section class="main-section d-flex bg-light">
+        <aside class="bg--secondary animate__animated animate__bounceInLeft animate__delay-.2s">
             <div class="side-item d-none d-md-flex toggle--btn my-2 text-white justify-content-end align-items-center" id="toggleSidebar" ><span><i class="bi bi-list text-white h4 me-2 me-lg-4"></i></span></div>
             <?php include "./components/sidebar.php" ?>
         </aside>
-        <main class="content-wrapper bg-light">
+        <main class="content-wrapper">
             <div class="container-fluid">
                 <div class="dynamic-content">
                 </div>

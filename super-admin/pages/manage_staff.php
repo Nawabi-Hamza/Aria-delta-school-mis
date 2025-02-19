@@ -121,7 +121,7 @@ if(isset($_POST['btn-register'])){
     }
 </style>
 
-<div class="mb-5">
+<div class="mb-5 animate__animated animate__fadeInUp animate__delay-0.5s">
     <div class="container">
         <div class="top-title">
             <div class="d-flex justify-content-between">

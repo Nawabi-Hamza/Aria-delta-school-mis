@@ -7,6 +7,7 @@
     --primary-color: #056da0;
     --secondary-color:rgba(0, 0, 0, 0.83);
 }
+
 /* Change "info" color for tables */
 .table-info {
     --bs-table-bg: var(--primary-color) !important;

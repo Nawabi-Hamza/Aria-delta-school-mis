@@ -7,17 +7,18 @@
     <link rel="stylesheet" href="../assets/bootstrap/bs.min.css">
     <script src="../assets/bootstrap/bs.min.js" ></script>
      <link rel="stylesheet" href="../assets/css/main.css">
+     <link rel="stylesheet" href="../assets/css/animate.css">
     <title>School | Parent Portal</title>
 </head>
 <body>
     <header>
         <?php include "./components/navbar.php" ?>
     </header>
-    <section class="main-section d-flex">
-        <aside class="bg-light">
+    <section class="main-section d-flex bg-light">
+        <aside class="bg-light animate__animated animate__bounceInLeft animate__delay-.2s">
             <?php include "./components/sidebar.php" ?>
         </aside>
-        <main class="content-wrapper bg-light">
+        <main class="content-wrapper">
             <div class="container-fluid toggle--btn my-2" onclick="toggleSideBar()"><i class="bi bi-list h3"></i></div>
             <div class="dynamic-content container-fluid">
             </div>

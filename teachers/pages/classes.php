@@ -39,7 +39,7 @@ if ($stmt->num_rows > 0) {
 
     // Step 3: Fetch subject names from subjects table
     if ($subject_stmt->num_rows > 0) {
-        echo "<div class='timetable-container'>";
+        echo "<div class='timetable-container animate__animated animate__fadeInUp animate__delay-0.5s'>";
         echo "<h2>Timetable for Teacher ID $teacher_id</h2>";
         echo "<table>";
         echo "<tr><th>Subject Name</th></tr>"; // Table header

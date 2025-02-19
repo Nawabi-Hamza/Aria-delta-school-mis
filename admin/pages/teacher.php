@@ -57,7 +57,7 @@ $result = false;
 ?>
 
     
-<div class="container mt-4">
+<div class="container mt-4 animate__animated animate__fadeInUp animate__delay-0.5s">
     <h2>Teacher Details Managed by You</h2>
     
     

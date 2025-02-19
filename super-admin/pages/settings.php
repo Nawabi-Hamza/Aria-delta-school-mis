@@ -104,7 +104,7 @@ if (isset($_POST['update-privileges'])) {
         }
     </style>
 
-<div class="bg-white mb-4 rounded rounded-3 shadow">
+<div class="bg-white mb-4 rounded rounded-3 shadow animate__animated animate__fadeInUp animate__delay-0.5s">
         <div class="container p-4">
             <div class="below">
                 <div class="top-title">

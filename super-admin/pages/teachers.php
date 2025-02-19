@@ -134,7 +134,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_teacher'])) {
 
 </style>
 
-<div class="">
+<div class="animate__animated animate__fadeInUp animate__delay-0.5s">
     <div class="container bg-white p-4 border rounded mb-5">
         <div class="top-title">
             <h3>Current Hired Teachers</h3>

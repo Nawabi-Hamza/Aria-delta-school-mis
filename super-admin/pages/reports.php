@@ -173,72 +173,13 @@ $selectedMonth = isset($_POST['month']) ? $_POST['month'] : $today->format('Y-m'
 
 ?>
 
-    <!-- <style>
-        /* body {
-            font-family: 'Times New Roman', serif;
-            background-color: #f0f0f0;
-            color: #333;
-            margin: 0;
-            padding: 40px 20px;
-        } */
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-            font-size: 36px;
-        }
-        h2 {
-            text-align: center;
-            color: #34495e;
-            font-size: 24px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 30px;
-        }
-        table, th, td {
-            border: 1px solid #bdc3c7;
-        }
-        th, td {
-            padding: 12px;
-            text-align: center;
-            font-size: 18px;
-        }
-        th {
-            background-color: #3498db;
-            color: white;
-        }
-        td {
-            background-color: #ecf0f1;
-        }
-        tr:hover td {
-            background-color: #dfe6e9;
-        }
-        button, select {
-            padding: 12px 20px;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            cursor: pointer;
-            margin: 10px 5px;
-            font-size: 16px;
-        }
-        button:hover, select:hover {
-            background-color: #2980b9;
-        }
-        select {
-            font-size: 16px;
-        }
-    </style> -->
+    
 
-
-<div class="bg-white mb-4 rounded rounded-3 shadow">
+<div class="bg-white mb-4 rounded rounded-3 shadow animate__animated animate__fadeInUp animate__delay-0.5s">
     <div class="container p-4">
         <h1>Customer Report</h1>
-    
-       
         <form method="post" action="" class="d-flex justify-content-end gap-2 ">
-            <select name="month" class="btn btn-outline-primary bg-info text-white">
+            <select name="month" class="btn btn-outline-info ">
                 <?php
                
                     for ($i = 1; $i <= 12; $i++) {
@@ -250,14 +191,14 @@ $selectedMonth = isset($_POST['month']) ? $_POST['month'] : $today->format('Y-m'
                     }
                 ?>
             </select>
-            <button type="submit" class="btn btn-outline-primary" name="period" value="daily">Daily Report</button>
-            <button type="submit" class="btn btn-outline-primary" name="period" value="weekly">Weekly Report</button>
-            <button type="submit" class="btn btn-outline-primary" name="period" value="monthly">Monthly Report</button>
+            <button type="submit" class="btn btn-outline-info" name="period" value="daily">Daily Report</button>
+            <button type="submit" class="btn btn-outline-info" name="period" value="weekly">Weekly Report</button>
+            <button type="submit" class="btn btn-outline-info" name="period" value="monthly">Monthly Report</button>
         </form>
     
         <h2>Selected Report: <?php echo ucfirst($period); ?></h2>
         <div class="table-responsive">
-            <table class="table table-primary border border-1">
+            <table class="table table-info border border-1">
                 <thead>
                     <tr>
                         <th>Period</th>

@@ -26,7 +26,7 @@
         cursor: pointer;
     }
 </style>
-<div class="container">
+<div class="container animate__animated animate__fadeInUp animate__delay-0.5s">
     <h2 class="text-center pb-5">Teacher Portal Dashboard</h2>
     <div class="card-container row justify-content-between">
         <div class="col-md-6 col-xl-3 mb-2">

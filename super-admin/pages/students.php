@@ -6,7 +6,7 @@ include('../includes/db_connection.php');
 ?>
 
 
-<div class="bg-white mb-4 rounded rounded-3 shadow">
+<div class="bg-white animate__animated animate__fadeInUp animate__delay-0.5s mb-4 rounded rounded-3 shadow">
         <div class="container p-4">
             <div class="top-title">
                 <h3>Current Enrolled Students</h3><hr>
