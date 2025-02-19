@@ -18,6 +18,7 @@ function loadPageDynamic(directory) {
         }
     });
 }
+
 $(document).on('click','#sidebarButton', function(e) {
     e.preventDefault(); 
     var targetPage = $(this).data('target');  
@@ -34,3 +35,4 @@ document.addEventListener("DOMContentLoaded",function(){
     const currentPage = window.location.hash.split("#")[1]
     loadPageDynamic(`pages/${currentPage}`)
 })
+

@@ -108,125 +108,126 @@
 </style>
 <title>School | Admin Classes</title>
 
+<!-- Modal -->
+<div class="modal fade" id="insert-class-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="spinner"></div>
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <form action="classes.php" method="POST">
+                <div class="modal-header d-flex justify-content-between">
+                    <h5 class="modal-title" id="exampleModalLabel"><b>Please Enter Class Complete Details</b></h5>
+                    <button type="button" class="close btn btn-outline-danger" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            
+                            <div class="form-group mb-2">
+                                <label for="subjectName"><b>Class Name</b></label>
+                                <input type="text" class="form-control" name="className" placeholder="class name..." require>
+                            </div>
+
+                            <div class="form-group mb-2">
+                                <label for="gradeLevel"><b>Grade Level</b></label>
+                                <select name="gradeLevel" class="form-control" require>
+                                    <option>Please grade level</option>
+                                    <option value="Nursery | Pre-Kindergarten">Nursery | Pre-Kindergarten</option>
+                                    <option value="Prep Class">Prep Class</option>
+                                    <option value="Grade 1">Grade 1</option>
+                                    <option value="Grade 2">Grade 2</option>
+                                    <option value="Grade 3">Grade 3</option>
+                                    <option value="Grade 4">Grade 4</option>
+                                    <option value="Grade 5">Grade 5</option>
+                                    <option value="Grade 6">Grade 6</option>
+                                    <option value="Grade 7">Grade 7</option>
+                                    <option value="Grade 8">Grade 8</option>
+                                    <option value="Grade 9">Grade 9</option>
+                                    <option value="Grade 10">Grade 10</option>
+                                    <option value="Grade 11">Grade 11</option>
+                                    <option value="Grade 12">Grade 12</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group mb-2">
+                                <label for="amount"><b>student Amount</b></label>
+                                <input type="number" class="form-control" name="amount" placeholder="student amount..." require>
+                            </div>
+
+                            <div class="form-group mb-2">
+                                <label for="subjectName"><b>Student Type</b></label>
+                                <select class="form-control" name="studentType" require>
+                                    <option value="">please select students type</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                                
+                            </div>
+
+                            <div class="form-group mb-2">
+                                <label for="subjectName"><b>CareTaker</b></label>
+                                <?php // $fetchTeachers = $conn->query("select id, teacherName, lastname FROM teachers");?>
+                                <select class="form-control" name="caretaker" require>
+                                    <option>Please select caretaker</option>
+                                    <?php 
+                                        // if($fetchTeachers->num_rows > 0){
+                                        // while($row = $fetchTeachers->fetch_assoc()){
+                                        //     echo "<option value='" . $row['id'] . "'>" . $row['teacherName'], $row['lastname'] . "</option>";
+                                        // }
+
+                                        // }else
+                                        // {
+                                        //     echo "<option value=''>No options available</option>";  
+                                        // }
+                                    ?>
+                                </select>
+                            </div>
+                            
+                        </div>
+                        <div class="col">
+
+                            <div class="form-group mb-2">
+                                <label for="subjectName"><b>Room Number</b></label>
+                                <input type="number" class="form-control" name="roomNumber" placeholder="room number..." require>
+                            </div>
+
+                            <div class="form-group mb-2">
+                                <label for="currentStudents"><b>Current Students</b></label>
+                                <input type="number" class="form-control" name="currentStudents" placeholder="current students..." require>
+                            </div>
+
+                            <div class="form-group mb-2">
+                                <label for="subjectName"><b>Time</b></label>
+                                <select class="form-control" name="time" require>
+                                    <option value="">please select time</option>
+                                    <option value="Morning">Morning</option>
+                                    <option value="Afternoon">Afternoon</option>
+                                </select>
+                                
+                            </div>
+
+                            <div class="form-group mb-2">
+                                <label for="classFee"><b>Class Fee</b></label>
+                                <input type="text" class="form-control" name="classFee" placeholder="class fee..." require>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    <button type="submit" class="btn btn-outline-info" value="btn-insert"><i class="fa fa-save"></i> Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <div class="container-fluid mt-4 animate__animated animate__fadeInUp animate__delay-0.5s" id="">
     <div class="">
         <div class="d-flex justify-content-between">
             <h1 class="dashboard-title">My Classes</h1>
             <a id="btn-insert" class="btn btn-outline-info" data-toggle="modal" data-target="#insert-class-modal"><i class="bi bi-plus-circle"></i> Add New Subject</a>
-        </div>
-        <!-- Modal -->
-        <div class="modal fade" id="insert-class-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <form action="classes.php" method="POST">
-                        <div class="modal-header d-flex justify-content-between">
-                            <h5 class="modal-title" id="exampleModalLabel"><b>Please Enter Class Complete Details</b></h5>
-                            <button type="button" class="close btn btn-outline-danger" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col">
-                                    
-                                    <div class="form-group mb-2">
-                                        <label for="subjectName"><b>Class Name</b></label>
-                                        <input type="text" class="form-control" name="className" placeholder="class name..." require>
-                                    </div>
-
-                                    <div class="form-group mb-2">
-                                        <label for="gradeLevel"><b>Grade Level</b></label>
-                                        <select name="gradeLevel" class="form-control" require>
-                                            <option>Please grade level</option>
-                                            <option value="Nursery | Pre-Kindergarten">Nursery | Pre-Kindergarten</option>
-                                            <option value="Prep Class">Prep Class</option>
-                                            <option value="Grade 1">Grade 1</option>
-                                            <option value="Grade 2">Grade 2</option>
-                                            <option value="Grade 3">Grade 3</option>
-                                            <option value="Grade 4">Grade 4</option>
-                                            <option value="Grade 5">Grade 5</option>
-                                            <option value="Grade 6">Grade 6</option>
-                                            <option value="Grade 7">Grade 7</option>
-                                            <option value="Grade 8">Grade 8</option>
-                                            <option value="Grade 9">Grade 9</option>
-                                            <option value="Grade 10">Grade 10</option>
-                                            <option value="Grade 11">Grade 11</option>
-                                            <option value="Grade 12">Grade 12</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group mb-2">
-                                        <label for="amount"><b>student Amount</b></label>
-                                        <input type="number" class="form-control" name="amount" placeholder="student amount..." require>
-                                    </div>
-
-                                    <div class="form-group mb-2">
-                                        <label for="subjectName"><b>Student Type</b></label>
-                                        <select class="form-control" name="studentType" require>
-                                            <option value="">please select students type</option>
-                                            <option value="Male">Male</option>
-                                            <option value="Female">Female</option>
-                                        </select>
-                                        
-                                    </div>
-
-                                    <div class="form-group mb-2">
-                                        <label for="subjectName"><b>CareTaker</b></label>
-                                        <?php // $fetchTeachers = $conn->query("select id, teacherName, lastname FROM teachers");?>
-                                        <select class="form-control" name="caretaker" require>
-                                            <option>Please select caretaker</option>
-                                            <?php 
-                                                // if($fetchTeachers->num_rows > 0){
-                                                // while($row = $fetchTeachers->fetch_assoc()){
-                                                //     echo "<option value='" . $row['id'] . "'>" . $row['teacherName'], $row['lastname'] . "</option>";
-                                                // }
-
-                                                // }else
-                                                // {
-                                                //     echo "<option value=''>No options available</option>";  
-                                                // }
-                                            ?>
-                                        </select>
-                                    </div>
-                                    
-                                </div>
-                                <div class="col">
-
-                                    <div class="form-group mb-2">
-                                        <label for="subjectName"><b>Room Number</b></label>
-                                        <input type="number" class="form-control" name="roomNumber" placeholder="room number..." require>
-                                    </div>
-
-                                    <div class="form-group mb-2">
-                                        <label for="currentStudents"><b>Current Students</b></label>
-                                        <input type="number" class="form-control" name="currentStudents" placeholder="current students..." require>
-                                    </div>
-
-                                    <div class="form-group mb-2">
-                                        <label for="subjectName"><b>Time</b></label>
-                                        <select class="form-control" name="time" require>
-                                            <option value="">please select time</option>
-                                            <option value="Morning">Morning</option>
-                                            <option value="Afternoon">Afternoon</option>
-                                        </select>
-                                        
-                                    </div>
-
-                                    <div class="form-group mb-2">
-                                        <label for="classFee"><b>Class Fee</b></label>
-                                        <input type="text" class="form-control" name="classFee" placeholder="class fee..." require>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-danger" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                            <button type="submit" class="btn btn-outline-info" value="btn-insert"><i class="fa fa-save"></i> Save</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
         </div>
         <div class="table-responsive">
             <table class="table table-info border  table-hover">
