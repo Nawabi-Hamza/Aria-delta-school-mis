@@ -67,9 +67,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School MIS | Login</title>
+    <link rel="shortcut icon" href="./assets/images/school-logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="./assets/bootstrap/bs.min.css">
     <link rel="stylesheet" href="./assets/css/animate.css">
+    <title>School MIS | Login</title>
     <style>
         body{
             position: relative;

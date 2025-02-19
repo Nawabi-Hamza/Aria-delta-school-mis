@@ -22,8 +22,8 @@ observer.observe(document.documentElement, {
 
 // Initial direction setup in case the page starts with a different language
 updateDirection();
-    // notification popup
-    const notifyContainer = document.querySelector(".notify");
+// notification popup
+const notifyContainer = document.querySelector(".notify");
 const notification = document.querySelector(".notification");
 const notificationPopup = document.querySelector(".notifictaion-popup");
 notification.addEventListener("mouseenter", function() {
